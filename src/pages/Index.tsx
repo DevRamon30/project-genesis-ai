@@ -9,6 +9,7 @@ import { RisksSection } from "@/components/sections/RisksSection";
 import { AIEthicsSection } from "@/components/sections/AIEthicsSection";
 import { DocumentationSection } from "@/components/sections/DocumentationSection";
 import { LeanCanvasSection } from "@/components/sections/LeanCanvasSection";
+import { RobotMascot } from "@/components/mascot/RobotMascot";
 import { Brain } from "lucide-react";
 
 const Index = () => {
@@ -69,6 +70,9 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Robot Mascot */}
+      <RobotMascot />
     </div>
   );
 };
