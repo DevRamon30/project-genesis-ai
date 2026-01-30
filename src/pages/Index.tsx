@@ -9,7 +9,7 @@ import { RisksSection } from "@/components/sections/RisksSection";
 import { AIEthicsSection } from "@/components/sections/AIEthicsSection";
 import { DocumentationSection } from "@/components/sections/DocumentationSection";
 import { LeanCanvasSection } from "@/components/sections/LeanCanvasSection";
-import { Brain, Heart } from "lucide-react";
+import { Brain } from "lucide-react";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("visao");
@@ -65,10 +65,8 @@ const Index = () => {
               </p>
             </div>
           </div>
-          <div className="mt-6 flex items-center justify-center gap-1 text-xs text-muted-foreground">
-            <span>Feito com</span>
-            <Heart className="h-3 w-3 text-destructive" />
-            <span>para o trabalho acadêmico</span>
+          <div className="mt-6 flex items-center justify-center text-xs text-muted-foreground">
+            <span>Todos os direitos Reservados - Vitor Ramon</span>
           </div>
         </div>
       </footer>
