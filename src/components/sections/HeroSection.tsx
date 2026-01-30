@@ -71,14 +71,14 @@ export function HeroSection() {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a 
               href="#visao" 
-              className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-primary transition-all hover:bg-blue-50 hover:shadow-lg"
+              className="btn-float inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-primary hover:bg-blue-50 hover:shadow-lg"
             >
               <FileText className="h-5 w-5" />
               Ver Documentação
             </a>
             <a 
               href="#docs" 
-              className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
+              className="btn-float inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur-sm hover:bg-white/20"
             >
               <BookOpen className="h-5 w-5" />
               Ferramentas Utilizadas

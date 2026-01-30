@@ -219,4 +219,30 @@
       transform: scale(1); 
     }
   }
+
+  /* Floating button effect */
+  .btn-float {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .btn-float:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px hsl(217 91% 50% / 0.25);
+  }
+
+  .btn-float:active {
+    transform: translateY(-2px);
+  }
+
+  /* Section fade in on scroll */
+  .section-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .section-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
