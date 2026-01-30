@@ -58,7 +58,7 @@ const Index = () => {
             </div>
             <div className="text-center md:text-right">
               <p className="text-sm text-muted-foreground">
-                UniFECAF • Curso de IA e Automação Digital
+                Curso de IA e Automação Digital
               </p>
               <p className="text-xs text-muted-foreground">
                 Fundamentos de Gestão de Projetos • 2026
