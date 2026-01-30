@@ -38,19 +38,19 @@ export function SectionCard({ id, title, subtitle, icon: Icon, children, classNa
       id={id} 
       className={`section-animate ${isVisible ? 'visible' : ''} ${className}`}
     >
-      <div className="card-elevated p-6 md:p-8">
-        <div className="mb-6 flex items-start gap-4">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
-            <Icon className="h-6 w-6 text-primary" />
+      <div className="card-elevated p-4 sm:p-6 md:p-8">
+        <div className="mb-4 sm:mb-6 flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
+          <div className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10">
+            <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold">{title}</h2>
+            <h2 className="text-xl sm:text-2xl font-bold">{title}</h2>
             {subtitle && (
-              <p className="mt-1 text-muted-foreground">{subtitle}</p>
+              <p className="mt-1 text-sm sm:text-base text-muted-foreground">{subtitle}</p>
             )}
           </div>
         </div>
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {children}
         </div>
       </div>

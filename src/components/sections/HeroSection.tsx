@@ -3,7 +3,7 @@ import heroVisual from "@/assets/hero-visual.jpg";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden hero-gradient py-16 md:py-24">
+    <section className="relative overflow-hidden hero-gradient py-12 sm:py-16 md:py-24">
       {/* Background image */}
       <div 
         className="absolute inset-0 opacity-20"
@@ -23,62 +23,62 @@ export function HeroSection() {
         <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-accent/20 blur-3xl" />
       </div>
 
-      <div className="container relative">
+      <div className="container relative px-4 sm:px-6">
         <div className="mx-auto max-w-4xl text-center">
           {/* Badge */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 backdrop-blur-sm">
-            <Brain className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Projeto de Gestão de Produtos</span>
+          <div className="mb-4 sm:mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 sm:px-4 py-1 sm:py-1.5 backdrop-blur-sm">
+            <Brain className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
+            <span className="text-xs sm:text-sm font-medium text-primary">Projeto de Gestão de Produtos</span>
           </div>
 
           {/* Title */}
-          <h1 className="mb-4 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+          <h1 className="mb-3 sm:mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
             InsightAI Pro
           </h1>
-          <p className="mb-2 text-xl text-blue-200 md:text-2xl">
+          <p className="mb-2 text-lg text-blue-200 sm:text-xl md:text-2xl">
             Do Problema ao Produto
           </p>
-          <p className="mb-8 text-base text-blue-300/80 md:text-lg max-w-2xl mx-auto">
+          <p className="mb-6 sm:mb-8 text-sm text-blue-300/80 sm:text-base md:text-lg max-w-2xl mx-auto">
             Planejamento estratégico de um produto digital com IA Generativa para análise 
             automatizada de dados de atendimento ao cliente
           </p>
 
           {/* Stats */}
-          <div className="mb-10 flex flex-wrap items-center justify-center gap-6 md:gap-10">
+          <div className="mb-8 sm:mb-10 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-10">
             <div className="text-center">
-              <div className="flex items-center justify-center gap-1.5 text-3xl font-bold text-white">
-                <Sparkles className="h-6 w-6 text-accent" />
+              <div className="flex items-center justify-center gap-1.5 text-2xl font-bold text-white sm:text-3xl">
+                <Sparkles className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
                 IA
               </div>
-              <p className="text-sm text-blue-300">Generativa</p>
+              <p className="text-xs sm:text-sm text-blue-300">Generativa</p>
             </div>
-            <div className="h-10 w-px bg-blue-500/30" />
+            <div className="h-8 sm:h-10 w-px bg-blue-500/30" />
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">MVP</div>
-              <p className="text-sm text-blue-300">8 semanas</p>
+              <div className="text-2xl font-bold text-white sm:text-3xl">MVP</div>
+              <p className="text-xs sm:text-sm text-blue-300">8 semanas</p>
             </div>
-            <div className="h-10 w-px bg-blue-500/30" />
+            <div className="h-8 sm:h-10 w-px bg-blue-500/30" />
             <div className="text-center">
-              <div className="flex items-center justify-center gap-1.5 text-3xl font-bold text-white">
+              <div className="flex items-center justify-center gap-1.5 text-2xl font-bold text-white sm:text-3xl">
                 3
-                <TrendingUp className="h-6 w-6 text-success" />
+                <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 text-success" />
               </div>
-              <p className="text-sm text-blue-300">Fases</p>
+              <p className="text-xs sm:text-sm text-blue-300">Fases</p>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <a 
               href="#visao" 
-              className="btn-float inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-primary hover:bg-blue-50 hover:shadow-lg"
+              className="btn-float inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 font-semibold text-primary hover:bg-blue-50 hover:shadow-lg sm:w-auto"
             >
               <FileText className="h-5 w-5" />
               Ver Documentação
             </a>
             <a 
               href="#docs" 
-              className="btn-float inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur-sm hover:bg-white/20"
+              className="btn-float inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur-sm hover:bg-white/20 sm:w-auto"
             >
               <BookOpen className="h-5 w-5" />
               Ferramentas Utilizadas
@@ -87,7 +87,7 @@ export function HeroSection() {
         </div>
 
         {/* Curso Info */}
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-blue-300">
+        <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2 sm:gap-6 text-xs sm:text-sm text-blue-300">
           <span className="flex items-center gap-2">
             <BookOpen className="h-4 w-4" />
             Fundamentos de Gestão de Projetos
