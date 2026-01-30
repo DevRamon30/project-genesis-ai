@@ -116,6 +116,15 @@ export default {
           from: { opacity: "0", transform: "translateY(30px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        "wave": {
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "10%": { transform: "rotate(14deg)" },
+          "20%": { transform: "rotate(-8deg)" },
+          "30%": { transform: "rotate(14deg)" },
+          "40%": { transform: "rotate(-4deg)" },
+          "50%": { transform: "rotate(10deg)" },
+          "60%": { transform: "rotate(0deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -126,6 +135,7 @@ export default {
         "float": "float 3s ease-in-out infinite",
         "float-subtle": "float-subtle 2.5s ease-in-out infinite",
         "section-enter": "section-enter 0.6s ease-out forwards",
+        "wave": "wave 2.5s ease-in-out infinite",
       },
     },
   },
