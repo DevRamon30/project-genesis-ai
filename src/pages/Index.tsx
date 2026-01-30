@@ -31,7 +31,7 @@ const Index = () => {
         <HeroSection />
 
         {/* Content Sections */}
-        <div className="container py-12 space-y-12">
+        <div className="container px-4 py-8 space-y-8 sm:px-6 sm:py-12 sm:space-y-12 lg:px-8">
           <VisionSection />
           <LeanCanvasSection />
           <MVPSection />
@@ -42,7 +42,6 @@ const Index = () => {
           <DocumentationSection />
         </div>
       </main>
-
       {/* Footer */}
       <footer className="border-t bg-card py-8">
         <div className="container">
