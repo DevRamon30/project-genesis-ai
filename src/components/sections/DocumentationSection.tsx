@@ -1,6 +1,6 @@
 import { 
   FileText, ExternalLink, Figma, Trello, FileSpreadsheet, 
-  Youtube, BookOpen, CheckCircle2, Lightbulb, Grid3X3
+  BookOpen, Lightbulb, Grid3X3
 } from "lucide-react";
 import { SectionCard } from "../layout/SectionCard";
 
@@ -123,56 +123,6 @@ export function DocumentationSection() {
         </div>
       </div>
 
-      {/* Entregáveis */}
-      <div className="rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20 p-6">
-        <h3 className="mb-4 font-semibold">Checklist de Entregáveis</h3>
-        <div className="grid gap-4 md:grid-cols-3">
-          <div>
-            <p className="mb-2 text-xs font-medium uppercase text-muted-foreground">Parte Teórica (1,5 pts)</p>
-            <ul className="space-y-1.5">
-              {["Visão de Produto", "Definição do MVP", "Roadmap", "Ciclo de Vida", "Gerenciamento de Riscos", "Gestão de IA"].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-sm">
-                  <CheckCircle2 className="h-4 w-4 text-success" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="mb-2 text-xs font-medium uppercase text-muted-foreground">Parte Prática (3,5 pts)</p>
-            <ul className="space-y-1.5">
-              {["Canvas de Visão", "Documento de MVP", "Roadmap Visual", "Matriz de Riscos", "README.md"].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-sm">
-                  <CheckCircle2 className="h-4 w-4 text-success" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="mb-2 text-xs font-medium uppercase text-muted-foreground">Vídeo Pitch (2,0 pts)</p>
-            <ul className="space-y-1.5">
-              {["Contexto do problema", "Visão do produto", "MVP proposto", "Roadmap", "Riscos e mitigação", "Justificativa estratégica"].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-sm">
-                  <CheckCircle2 className="h-4 w-4 text-success" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Video info */}
-        <div className="mt-6 flex items-center gap-3 rounded-lg bg-card border p-4">
-          <Youtube className="h-8 w-8 text-destructive" />
-          <div>
-            <p className="font-medium">Vídeo Pitch (até 4 minutos)</p>
-            <p className="text-sm text-muted-foreground">
-              Hospedar no YouTube (pode ser não listado) com link acessível
-            </p>
-          </div>
-        </div>
-      </div>
     </SectionCard>
   );
 }
