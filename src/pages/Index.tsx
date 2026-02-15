@@ -7,7 +7,7 @@ import { RoadmapSection } from "@/components/sections/RoadmapSection";
 import { LifecycleSection } from "@/components/sections/LifecycleSection";
 import { RisksSection } from "@/components/sections/RisksSection";
 import { AIEthicsSection } from "@/components/sections/AIEthicsSection";
-import { DocumentationSection } from "@/components/sections/DocumentationSection";
+
 import { LeanCanvasSection } from "@/components/sections/LeanCanvasSection";
 import { RobotMascot } from "@/components/mascot/RobotMascot";
 import { Brain } from "lucide-react";
@@ -40,7 +40,7 @@ const Index = () => {
           <LifecycleSection />
           <RisksSection />
           <AIEthicsSection />
-          <DocumentationSection />
+          
         </div>
       </main>
       {/* Footer */}
