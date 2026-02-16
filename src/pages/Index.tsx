@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Header } from "@/components/layout/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { VisionSection } from "@/components/sections/VisionSection";
@@ -44,10 +45,19 @@ const Index = () => {
         </div>
       </main>
       {/* Footer */}
-      <footer className="border-t bg-card py-8">
+      <motion.footer 
+        className="border-t bg-card py-8"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="container">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <div className="flex items-center gap-3">
+            <motion.div 
+              className="flex items-center gap-3"
+              whileHover={{ scale: 1.03 }}
+            >
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
                 <Brain className="h-5 w-5 text-primary-foreground" />
               </div>
@@ -55,7 +65,7 @@ const Index = () => {
                 <p className="font-semibold">InsightAI Pro</p>
                 <p className="text-xs text-muted-foreground">Projeto de Gestão de Produtos Digitais</p>
               </div>
-            </div>
+            </motion.div>
             <div className="text-center md:text-right">
               <p className="text-sm text-muted-foreground">
                 Curso de IA e Automação Digital
@@ -69,7 +79,7 @@ const Index = () => {
             <span>Todos os direitos Reservados - Vitor Ramon</span>
           </div>
         </div>
-      </footer>
+      </motion.footer>
 
       {/* Robot Mascot */}
       <RobotMascot />

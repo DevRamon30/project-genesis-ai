@@ -1,4 +1,5 @@
 import { BarChart3, Search, TestTube, Rocket, RefreshCw, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { SectionCard } from "../layout/SectionCard";
 
 const lifecyclePhases = [
@@ -96,12 +97,26 @@ export function LifecycleSection() {
       <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
         {lifecyclePhases.map((phase, index) => (
           <div key={phase.id} className="flex items-center">
-            <div className={`flex items-center gap-2 rounded-full bg-gradient-to-r ${phase.color} px-4 py-2`}>
+            <motion.div 
+              className={`flex items-center gap-2 rounded-full bg-gradient-to-r ${phase.color} px-4 py-2`}
+              initial={{ opacity: 0, scale: 0.7 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.15, type: "spring" }}
+              whileHover={{ scale: 1.1, y: -3 }}
+            >
               <phase.icon className="h-4 w-4 text-white" />
               <span className="text-sm font-medium text-white">{phase.name}</span>
-            </div>
+            </motion.div>
             {index < lifecyclePhases.length - 1 && (
-              <ArrowRight className="mx-2 h-5 w-5 text-muted-foreground hidden sm:block" />
+              <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.15 + 0.2 }}
+              >
+                <ArrowRight className="mx-2 h-5 w-5 text-muted-foreground hidden sm:block" />
+              </motion.div>
             )}
           </div>
         ))}
@@ -109,16 +124,24 @@ export function LifecycleSection() {
 
       {/* Detalhes das Fases */}
       <div className="grid gap-6 md:grid-cols-2">
-        {lifecyclePhases.map((phase) => (
-          <div 
+        {lifecyclePhases.map((phase, index) => (
+          <motion.div 
             key={phase.id} 
-            className="rounded-xl border bg-card p-5 transition-all hover:shadow-md"
+            className="rounded-xl border bg-card p-5 transition-all"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-30px" }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{ boxShadow: "0 10px 30px -10px hsl(217 91% 50% / 0.12)", y: -3 }}
           >
             <div className="mb-4 flex items-start justify-between">
               <div className="flex items-center gap-3">
-                <div className={`flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-r ${phase.color}`}>
+                <motion.div 
+                  className={`flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-r ${phase.color}`}
+                  whileHover={{ rotate: 10 }}
+                >
                   <phase.icon className="h-5 w-5 text-white" />
-                </div>
+                </motion.div>
                 <div>
                   <h3 className="font-bold">{phase.name}</h3>
                   <p className="text-xs text-muted-foreground">{phase.duration}</p>
@@ -156,7 +179,7 @@ export function LifecycleSection() {
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </SectionCard>
