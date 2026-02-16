@@ -1,4 +1,5 @@
 import { Lightbulb, Zap, Star, Clock, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { SectionCard } from "../layout/SectionCard";
 import { CustomBadge } from "../common/CustomBadge";
 
@@ -106,27 +107,27 @@ export function MVPSection() {
           A priorização foi baseada na matriz <strong>Valor x Esforço</strong>, focando em:
         </p>
         <div className="grid gap-3 md:grid-cols-3">
-          <div className="flex items-center gap-2 rounded-lg bg-background p-3">
-            <Zap className="h-5 w-5 text-warning" />
-            <div>
-              <p className="text-sm font-medium">Time-to-Value</p>
-              <p className="text-xs text-muted-foreground">Entrega rápida de valor</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 rounded-lg bg-background p-3">
-            <Clock className="h-5 w-5 text-info" />
-            <div>
-              <p className="text-sm font-medium">Viabilidade Técnica</p>
-              <p className="text-xs text-muted-foreground">Desenvolvimento em 8 semanas</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 rounded-lg bg-background p-3">
-            <ArrowRight className="h-5 w-5 text-success" />
-            <div>
-              <p className="text-sm font-medium">Validação de Hipóteses</p>
-              <p className="text-xs text-muted-foreground">Feedback real do mercado</p>
-            </div>
-          </div>
+          {[
+            { icon: Zap, color: "text-warning", title: "Time-to-Value", desc: "Entrega rápida de valor" },
+            { icon: Clock, color: "text-info", title: "Viabilidade Técnica", desc: "Desenvolvimento em 8 semanas" },
+            { icon: ArrowRight, color: "text-success", title: "Validação de Hipóteses", desc: "Feedback real do mercado" },
+          ].map((item, i) => (
+            <motion.div
+              key={item.title}
+              className="flex items-center gap-2 rounded-lg bg-background p-3"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              whileHover={{ scale: 1.03 }}
+            >
+              <item.icon className={`h-5 w-5 ${item.color}`} />
+              <div>
+                <p className="text-sm font-medium">{item.title}</p>
+                <p className="text-xs text-muted-foreground">{item.desc}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
 
@@ -134,16 +135,24 @@ export function MVPSection() {
       <div>
         <h3 className="mb-4 font-semibold">Funcionalidades do MVP</h3>
         <div className="space-y-4">
-          {mvpFeatures.map((feature) => (
-            <div 
+          {mvpFeatures.map((feature, index) => (
+            <motion.div 
               key={feature.id} 
               className="card-interactive rounded-xl border p-5"
+              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              whileHover={{ scale: 1.01, y: -3 }}
             >
               <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground">
+                  <motion.span 
+                    className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground"
+                    whileHover={{ rotate: 10, scale: 1.1 }}
+                  >
                     {feature.id}
-                  </span>
+                  </motion.span>
                   <div>
                     <h4 className="font-semibold">{feature.name}</h4>
                     <p className="text-sm text-muted-foreground">{feature.description}</p>
@@ -177,7 +186,7 @@ export function MVPSection() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
