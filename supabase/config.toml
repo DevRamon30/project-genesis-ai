@@ -1,0 +1,4 @@
+project_id = "smekpyizafoamyaobvny"
+
+[functions.project-data]
+verify_jwt = false
